@@ -18,6 +18,7 @@ function App() {
 			<NetflixSeries />
 			<NetflixSeries />
 			<NetflixSeries />
+      <Sony />
 		</>
 	);
 }
@@ -33,6 +34,28 @@ const NetflixSeries=()=>{
     <h2>Name: Stranger Things</h2>
     <h3>Genre: Science Fiction</h3>
     <p>Stranger Things is a popular Netflix series that combines supernatural elements with 1980s nostalgia.</p>
+    </>
+  )
+}
+
+const Sony=()=>{
+  const name="Stranger Things"
+  const genre="Science Fiction"
+  const description="Stranger Things is a popular Netflix series that combines supernatural elements with 1980s nostalgia."
+  const getValue=()=>{
+    const value="Nice Value"
+    return value
+  }
+  return(
+    <>
+    <div>
+      <img src="/sony.png" alt="sony" width="600" height="300"/>
+    </div>
+    <h2>Name:{ name }</h2>
+    <h3>Genre: { genre }</h3>
+    <p>{ description }</p>
+    <h3>Rating: {5 + 3.2}</h3>
+    <p>Value from function: {getValue()}</p>
     </>
   )
 }
