@@ -11,7 +11,7 @@ const Movie = () => {
 							<div>
 								<img
 									src={item.img_url}
-									alt="qot.jpg"
+									alt={item.name}
 									width="40%"
 									height="40%"
 								/>
