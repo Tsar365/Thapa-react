@@ -2,14 +2,16 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import Profile from './Profile.jsx'
-// import App from './App.jsx'
-// import Movie from './Movie.jsx'
+import App from './App.jsx'
+import Movie from './Movie.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
-    // <App />
-// {/* <Movie/> */}
-<Profile/>
+<>
+  {/* // <StrictMode> */}
+    {/* <App /> */}
+<Movie/>
+{/* <Profile/> */}
   // {/* </StrictMode>, */}
+</>
 )

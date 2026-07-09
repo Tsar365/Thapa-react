@@ -15,10 +15,19 @@ const SeriesCard = ({item}) => {
 					/>
 				</div>
 				<h2>Name: {item.name}</h2>
-				<h3>Rating:{item.rating}</h3>
-				<p>Summary:{item.description}</p>
-				<p>Genre: {item.genre}</p>
-				<p>Cast: {item.cast}</p>
+				<h3 style={{ margin: '1.2rem 0' }}>Rating:{item.rating}</h3>
+				<p style={{ margin: '1.2rem 0' }}>Summddddddddddary:{item.description}</p>
+				<p style={{ margin: '1.2rem 0' }}>Genre: {item.genre}</p>
+				<p style={{ margin: '1.2rem 0' }}>Cast: {item.cast}</p>
+
+				{/* <h3>Rating: {rating}</h3>
+
+				<p>Summary: {description}</p>
+
+				<p>Genre: {genre.join(', ')}</p>
+
+				<p>Cast: {cast.join(', ')}</p> */}
+
 				<a
 					href={item.watch_url}
 					target="_blank"
@@ -26,8 +35,6 @@ const SeriesCard = ({item}) => {
 					<button>Watch Now</button>
 				</a>
 			</li>
-			
-			
 		</div>
 	);
 };
