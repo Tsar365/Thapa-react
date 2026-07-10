@@ -5,6 +5,7 @@ import Profile from './Profile.jsx'
 import App from './App.jsx'
 import Movie from './Movie.jsx'
 import EventHandling from './components/eventhandling/EventHandling.jsx'
+import { EventProps } from './components/eventhandling/EventProps.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -12,7 +13,8 @@ createRoot(document.getElementById('root')).render(
   {/* // <StrictMode> */}
     {/* <App /> */}
 {/* <Movie/> */}
-<EventHandling></EventHandling>
+{/* <EventHandling></EventHandling> */}
+<EventProps/>
 {/* <Profile/> */}
   // {/* </StrictMode>, */}
 </>
