@@ -16,7 +16,7 @@ const SeriesCard = ({item}) => {
 				</div>
 				<h2>Name: {item.name}</h2>
 				<h3 style={{ margin: '1.2rem 0' }}>Rating:{item.rating}</h3>
-				<p style={{ margin: '1.2rem 0' }}>Summddddddddddary:{item.description}</p>
+				<p style={{ margin: '1.2rem 0' }}>Summary:{item.description}</p>
 				<p style={{ margin: '1.2rem 0' }}>Genre: {item.genre}</p>
 				<p style={{ margin: '1.2rem 0' }}>Cast: {item.cast}</p>
 
