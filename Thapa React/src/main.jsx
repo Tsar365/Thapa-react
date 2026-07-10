@@ -7,6 +7,8 @@ import Movie from './Movie.jsx'
 import EventHandling from './components/eventhandling/EventHandling.jsx'
 import { EventProps } from './components/eventhandling/EventProps.jsx'
 import { EventPropagation } from './components/eventhandling/EventPropagation.jsx'
+import WrongState from './components/state/WrongState.jsx'
+import UseState from './components/state/UseState.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -16,7 +18,10 @@ createRoot(document.getElementById('root')).render(
 {/* <Movie/> */}
 {/* <EventHandling></EventHandling> */}
 {/* <EventProps/> */}
-<EventPropagation/>
+{/* <EventPropagation/> */}
+{/* <WrongState/> */}
+<UseState/>
+
 {/* <Profile/> */}
   // {/* </StrictMode>, */}
 </>
