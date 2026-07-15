@@ -9,6 +9,7 @@ import { EventProps } from './components/eventhandling/EventProps.jsx'
 import { EventPropagation } from './components/eventhandling/EventPropagation.jsx'
 import WrongState from './components/state/WrongState.jsx'
 import UseState from './components/state/UseState.jsx'
+import { LiftStateUp } from './components/state/LiftStateUp.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -20,7 +21,8 @@ createRoot(document.getElementById('root')).render(
 {/* <EventProps/> */}
 {/* <EventPropagation/> */}
 {/* <WrongState/> */}
-<UseState/>
+{/* <UseState/> */}
+<LiftStateUp/>
 
 {/* <Profile/> */}
   // {/* </StrictMode>, */}
