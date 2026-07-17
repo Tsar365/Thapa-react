@@ -11,6 +11,7 @@ import WrongState from './components/state/WrongState.jsx'
 import UseState from './components/state/UseState.jsx'
 import { LiftStateUp } from './components/state/LiftStateUp.jsx'
 import { ToggleSwitch } from './components/projects/toggleswitch/ToggleSwitch.jsx'
+import Todo from './components/projects/todo/Todo.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -24,7 +25,8 @@ createRoot(document.getElementById('root')).render(
 {/* <WrongState/> */}
 {/* <UseState/> */}
 {/* <LiftStateUp/> */}
-<ToggleSwitch/>
+{/* <ToggleSwitch/> */}
+<Todo/>
 
 {/* <Profile/> */}
    {/* </StrictMode>, */}
