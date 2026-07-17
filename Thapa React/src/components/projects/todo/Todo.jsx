@@ -1,12 +1,13 @@
 // import React from 'react';
 import './Todo.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaCheck } from 'react-icons/fa6';
 import { MdDeleteForever } from 'react-icons/md';
 
 const Todo = () => {
 	const [inputValue, setInputValue] = useState('');
 	const [task, setTask] = useState([]);
+	const [dateTime, setDateTime]=useState("");
 
 	const handleInputChange = (value) => {
 		setInputValue(value);
@@ -27,10 +28,24 @@ const Todo = () => {
 		setInputValue('');
 	};
 
+	useEffect(()=>{
+		const interval = setInterval(() => {
+			const now = new Date();
+			const formattedDate = now.toLocaleDateString();
+			const formattedTime = now.toLocaleTimeString();
+
+			setDateTime(`${formattedDate} - ${formattedTime}`);
+		}, 1000);
+
+		return ()=>clearInterval(interval);
+	},[]);
+
+
 	return (
 		<>
 			<header className="todo-container">
 				<h1>Todo List</h1>
+				<h2 className='date-time'>{dateTime}</h2>
 			</header>
 
 			<section className="form">
@@ -43,7 +58,7 @@ const Todo = () => {
 							className="todo-input"
 							autoComplete="off"
 							value={inputValue}
-							onChange={(event) => handleInputChange(event.target.value)}
+							onChange={(event) => handleInputChange(event.target.value)}//we can get the value from this
 						/>
 					</div>
 
