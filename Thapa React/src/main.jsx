@@ -10,6 +10,7 @@ import { EventPropagation } from './components/eventhandling/EventPropagation.js
 import WrongState from './components/state/WrongState.jsx'
 import UseState from './components/state/UseState.jsx'
 import { LiftStateUp } from './components/state/LiftStateUp.jsx'
+import { ToggleSwitch } from './components/projects/toggleswitch/ToggleSwitch.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -22,9 +23,10 @@ createRoot(document.getElementById('root')).render(
 {/* <EventPropagation/> */}
 {/* <WrongState/> */}
 {/* <UseState/> */}
-<LiftStateUp/>
+{/* <LiftStateUp/> */}
+<ToggleSwitch/>
 
 {/* <Profile/> */}
-  // {/* </StrictMode>, */}
+   {/* </StrictMode>, */}
 </>
 )
