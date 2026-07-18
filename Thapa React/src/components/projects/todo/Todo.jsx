@@ -106,10 +106,13 @@ const Todo = () => {
 				</ul>
 			</section>
 
-<section>
-	<button className='clear-btn' onClick={()=>handleClearTodo()}>Clear All</button>
-</section>
-
+			<section className="clear-section">
+				<button
+					className="clear-btn"
+					onClick={()=>handleClearTodo()}>
+					Clear All
+				</button>
+			</section>
 		</>
 	);
 };
