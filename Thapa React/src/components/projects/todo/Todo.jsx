@@ -7,7 +7,7 @@ import { MdDeleteForever } from 'react-icons/md';
 const Todo = () => {
 	const [inputValue, setInputValue] = useState('');
 	const [task, setTask] = useState([]);
-	const [dateTime, setDateTime]=useState("");
+	const [dateTime, setDateTime] = useState('');
 
 	const handleInputChange = (value) => {
 		setInputValue(value);
@@ -28,7 +28,7 @@ const Todo = () => {
 		setInputValue('');
 	};
 
-	useEffect(()=>{
+	useEffect(() => {
 		const interval = setInterval(() => {
 			const now = new Date();
 			const formattedDate = now.toLocaleDateString();
@@ -37,16 +37,26 @@ const Todo = () => {
 			setDateTime(`${formattedDate} - ${formattedTime}`);
 		}, 1000);
 
-		return ()=>clearInterval(interval);
-	},[]);
+		return () => clearInterval(interval);
+	}, []);
 
+	const handleDeleteTodo = (value) => {
+		console.log(task);
+		console.log(value);
+		// const updatedTask=task.filter((curTask)=>curTask ===value);
+		const updatedTask=task.filter((curTask)=>curTask !==value);
+		setTask(updatedTask)
+	};
 
-	
+	const handleClearTodo=()=>{
+		setTask([])
+	}
+
 	return (
 		<>
 			<header className="todo-container">
 				<h1>Todo List</h1>
-				<h2 className='date-time'>{dateTime}</h2>
+				<h2 className="date-time">{dateTime}</h2>
 			</header>
 
 			<section className="form">
@@ -59,7 +69,7 @@ const Todo = () => {
 							className="todo-input"
 							autoComplete="off"
 							value={inputValue}
-							onChange={(event) => handleInputChange(event.target.value)}//we can get the value from this
+							onChange={(event) => handleInputChange(event.target.value)} //we can get the value from this
 						/>
 					</div>
 
@@ -85,7 +95,9 @@ const Todo = () => {
 									<FaCheck />
 								</button>
 
-								<button className="delete-btn">
+								<button
+									className="delete-btn"
+									onClick={() => handleDeleteTodo(curTask)}>
 									<MdDeleteForever />
 								</button>
 							</li>
@@ -93,6 +105,11 @@ const Todo = () => {
 					})}
 				</ul>
 			</section>
+
+<section>
+	<button className='clear-btn' onClick={()=>handleClearTodo()}>Clear All</button>
+</section>
+
 		</>
 	);
 };
